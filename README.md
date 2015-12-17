@@ -9,29 +9,28 @@ npm start
 #### Example
 
 ```js
-import React, { Component } from 'react';
-import Video from './Video';
+import React, { Component } from 'react'
+import Video from './Video'
 
 export default class VideoExample extends Component {
   constructor (props) {
-    super(props);
+    super(props)
 
-    this.state = {
-    };
+    this.state = {}
   }
 
   render () {
     var videoSrc = [
       'bunny.mp4',
       'bunny.ogg'
-    ];
+    ]
 
     return (
-        <Video
-          width={400}
-          src={videoSrc}
-        />
-    );
+      <Video
+        width={400}
+        src={videoSrc}
+      />
+    )
   }
 }
 ```
