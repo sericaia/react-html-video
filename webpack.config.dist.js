@@ -3,13 +3,13 @@ const path = require('path')
 module.exports = {
   devtool: 'source-map',
   entry: {
-    'react-video': './source/index.js'
+    'react-html-video': './source/index.js'
   },
   output: {
     path: 'dist',
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'react-video'
+    library: 'react-html-video'
   },
   externals: {
     react: {

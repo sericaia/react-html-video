@@ -1,5 +1,5 @@
 {
-  "name": "react-video",
+  "name": "react-html-video",
   "description": "React HTML5 Video",
   "author": "Daniela Borges <alunassertiva@gmail.com>",
   "user": "sericaia",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sericaia/react-video.git"
+    "url": "https://github.com/sericaia/react-html-video.git"
   },
   "keywords": [
     "react",
@@ -31,8 +31,8 @@
     "html5"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/sericaia/react-video",
-  "main": "dist/react-video.js",
+  "homepage": "https://github.com/sericaia/react-html-video",
+  "main": "dist/react-html-video.js",
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
