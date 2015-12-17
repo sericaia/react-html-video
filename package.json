@@ -1,0 +1,73 @@
+{
+  "name": "react-video",
+  "description": "React HTML5 Video",
+  "author": "Daniela Borges <alunassertiva@gmail.com>",
+  "user": "sericaia",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npm run build:demo && npm run build:dist",
+    "build:demo": "npm run clean:demo && NODE_ENV=production webpack --config webpack.config.demo.js -p --bail",
+    "build:dist": "npm run clean:dist && NODE_ENV=production webpack --config webpack.config.dist.js --bail",
+    "clean": "npm run clean:demo && npm run clean:dist",
+    "clean:demo": "rimraf build",
+    "clean:dist": "rimraf dist",
+    "deploy": "gh-pages -d build",
+    "lint": "standard",
+    "prebuild": "npm run lint",
+    "postpublish": "npm run deploy",
+    "prepublish": "npm run build",
+    "start": "webpack-dev-server --hot --inline --config webpack.config.dev.js",
+    "watch": "watch 'clear && npm run lint -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sericaia/react-video.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "video",
+    "html5"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sericaia/react-video",
+  "main": "dist/react-video.js",
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "dist"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^5.8.34",
+    "babel-core": "^5.8.34",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^5.4.0",
+    "babel-plugin-react-transform": "^1.1.1",
+    "css-loader": "^0.23.0",
+    "cssnext": "^1.8.4",
+    "cssnext-loader": "^1.0.1",
+    "gh-pages": "^0.6.0",
+    "html-webpack-plugin": "^1.7.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.0.1",
+    "rimraf": "^2.4.3",
+    "standard": "^5.4.1",
+    "style-loader": "^0.13.0",
+    "watch": "^0.16.0",
+    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.1",
+    "raf": "^3.1.0",
+    "react-pure-render": "^1.0.2"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0"
+  }
+}
